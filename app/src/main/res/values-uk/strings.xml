@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "Energy">]>
+<resources>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="ok">Зрозуміло</string>
+    <string name="unknown_error_message">Упс! Щось пішло не так. Спробуйте, будь ласка, пізніше</string>
+
+    <string name="uuid_input_title">Будь ласка, введіть UUID, який був наданий менеджером</string>
+    <string name="uuid_input_name">UUID</string>
+    <string name="uuid_hint">Ваш UUID</string>
+    <string name="uuid_submit">Підтвердити</string>
+    <string name="uuid_error_entered_full_link">Будь ласка, введіть лише UUID без "https://…"</string>
+    <string name="uuid_error_wrong">Надене UUID не корректне. Будь ласка, введіть правильний UUID</string>
+    <string name="uuid_error_no_connection">Хмм… Здається, що у вас немає підключення до інтернету</string>
+
+    <string name="home_message">Система успішно працює. Дякуємо за співпрацю</string>
+    <string name="uuid_text">Ваш uuid: %s</string>
+    <string name="home_uuid_change_message"> Змінити поточний UUID</string>
+    <string name="home_uuid_send_logs">Згенерувати звіт</string>
+    <string name="home_uuid_change_confirmation">Ви впевненні, що хочете змінити UUID?</string>
+    <string name="home_uuid_change_information">Ваш UUID буде видалений з цього девайсу</string>
+
+    <string name="power_notification_chanel_name">Системні сповіщення</string>
+    <string name="notification_service_started_title">&appname; розпочав перевірку</string>
+    <string name="notification_service_started_message">&appname; розпочав перевірку чи пристрій знаходиться на зарядці</string>
+    <string name="notification_service_running_title">&appname; запущений</string>
+    <string name="notification_service_running_message">&appname; перевіряє чи пристрій знаходиться на зарядці</string>
+    <string name="notification_service_stopped_title">&appname; зупинив перевірку</string>
+    <string name="current_situation">Карта наявності електроживлення</string>
+    <string name="notification_service_stopped_message">&appname; зупинив перевірку заряджання пристрою. Якщо &appname;
+        не запускається, перевірте свій UUID і спробуйте ще раз.</string>
+    <string name="notification_service_restart_title">&appname; повторно запущений</string>
+    <string name="notification_service_restart_message">&appname; повторно розпочав перевірку заряджання пристрою</string>
+
+
+</resources>

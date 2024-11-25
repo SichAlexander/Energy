@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "643267890233",
+    "firebase_url": "https://availabilitymonitoring-49916-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "availabilitymonitoring-49916",
+    "storage_bucket": "availabilitymonitoring-49916.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643267890233:android:bf7e3f05246e4643f4d1e8",
+        "android_client_info": {
+          "package_name": "com.uzhnu.availabilitymonitoring"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCbNwcJ5wAVqqQm64nyJ6PaMevx6mniP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

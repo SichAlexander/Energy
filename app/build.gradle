@@ -1,0 +1,132 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+    id 'io.gitlab.arturbosch.detekt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.firebase-perf'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.uzhnu.availabilitymonitoring'
+    compileSdk 33
+    buildToolsVersion "33.0.2"
+
+    defaultConfig {
+        applicationId "com.uzhnu.availabilitymonitoring"
+        minSdk 21
+        targetSdk 33
+        versionCode 4
+        versionName "1.0.6"
+        buildConfigField("String", "LINK_HEALTH_CHECK", '"https://hc-ping.com/"')
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+
+
+    buildTypes {
+        debug {
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "LINK_SERVER_API", '"https://google.com"')
+            buildConfigField("String", "SERVER_API_KEY", '"nxLG5pdg0O4gxrRIwSRJ1BdQT3gUnhYV8LVOM3TtoQk6KBFJcFQIiC2vn9MGdLYJlLvAXJscydd3Y8Y1itXQ6Me3XAZ9M4hJ3Xb9R4p8tUnD8lMZfpVq7IBidJWPPkiJuSB8xV2T4PiOaCnZzBIJpQAxMSfReAYIixm4h81SXfJUpPKDuqMpVqv6xb3R5M1dWOcVMuHxO4NMURopr0WefhhmOam1cTT71g2sckcWiQ0Nz2NK9lCD32L6QtIUx429"')
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "LINK_SERVER_API", '"https://google.com"')
+            buildConfigField("String", "SERVER_API_KEY", '"6N8zPKOm9gTIAiAwmnqFmYQsSNodnOPIDt6xXck7whX8aihLyXOJA2Zkakek3vyNEr47sFw5k6wg0qb049mxqZTSzX1qOt8jvJAj1WB6EBAwxYC9BWjrKooJweObBdZxdyD8SFLrcveA3jDSjTZxIpKqSzXKReGM9slqWpG6tZrD0FtMGK05FFqOA6sdbWa16559CB4iqx25GYQGspYsFABV6oSRVg1uOwTyGELp7JN5iapsbLeZiSgEar3TFGG0"')
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.3'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+kapt {
+    correctErrorTypes true
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-compose:1.6.1'
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation 'androidx.compose.material3:material3:1.0.1'
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:2.6.0-rc01"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    //Navigation
+    implementation "androidx.navigation:navigation-compose:$nav_version"
+    implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+
+    //Data store
+    implementation "androidx.datastore:datastore-preferences:$data_store_version"
+
+    //Dependency Injection
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    implementation 'androidx.hilt:hilt-work:1.0.0'
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+
+    // Add the dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-database")
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+
+    //Network
+    implementation "com.google.code.gson:gson:$gson_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
+
+    //WorkManager
+    implementation "androidx.work:work-runtime-ktx:$work_manager_version"
+
+    //Animation
+    implementation 'com.airbnb.android:lottie-compose:5.2.0'
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-perf-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-messaging-directboot'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+}
+

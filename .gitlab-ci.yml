@@ -1,0 +1,52 @@
+image: jangrewe/gitlab-ci-android
+
+variables: 
+  ANDROID_KEY_STOREFILE: "$CI_PROJECT_DIR/app/release.keystore"
+
+create_property_files:
+  stage: .pre
+  only:
+    - master
+  script:
+    - echo $ANDROID_KEY_STOREFILE_DATA | base64 -d > $CI_PROJECT_DIR/app/release.keystore
+  
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/app/release.keystore
+    expire_in: 10 mins
+
+# Basic android and gradle stuff
+# Check linting
+lintDebug:
+  interruptible: true
+  stage: build
+  script:
+    - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
+
+# Make Project
+assembleDebug:
+  interruptible: true
+  stage: build
+  script:
+    - ./gradlew assembleDebug
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/app/build/outputs/
+
+assembleRelease:
+  interruptible: true
+  stage: build
+  only:
+    - master
+  script:
+   - ./gradlew assembleRelease
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/app/build/outputs/
+
+# Run all tests, if any fails, interrupt the pipeline(fail it)
+debugTests:
+  interruptible: true
+  stage: test
+  script:
+    - ./gradlew -Pci --console=plain :app:testDebug

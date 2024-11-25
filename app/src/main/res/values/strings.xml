@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "Energy">]>
+<resources>
+    <string name="app_name" translatable="false">&appname;</string>
+    <string name="power_checker_notification_channel_id" translatable="false">power_checker_notification_chanel</string>
+
+    <string name="Uzhgorod" translatable="false">Uzhhorod</string>
+    <string name="Rahiv" translatable="false">Rahiv</string>
+    <string name="Tyachiv" translatable="false">Tyachiv</string>
+    <string name="Mizhhirskiy" translatable="false">Mizhhirskiy</string>
+    <string name="Volovets" translatable="false">Volovets</string>
+    <string name="Khust" translatable="false">Khust</string>
+    <string name="Svalyava" translatable="false">Svalyava</string>
+    <string name="Irshava" translatable="false">Irshava</string>
+    <string name="Vinogradiv" translatable="false">Vinogradiv</string>
+    <string name="Beregovo" translatable="false">Beregovo</string>
+    <string name="Perechyn" translatable="false">Perechyn</string>
+    <string name="Bereznuy" translatable="false">Bereznuy</string>
+    <string name="Mukachevo" translatable="false">Mukachevo</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="unknown_error_message">Ops! Something went wrong. Please try again later</string>
+
+    <string name="uuid_input_title">Please enter your UUID provided by manager</string>
+    <string name="uuid_input_name">UUID</string>
+    <string name="uuid_hint">Your UUID</string>
+    <string name="uuid_submit">Submit</string>
+    <string name="uuid_error_entered_full_link">Please enter only UUID, without "https://…" </string>
+    <string name="uuid_error_wrong">Provided UUID isn\'t correct. Please enter valid UUID</string>
+    <string name="uuid_error_no_connection">Hmm… Looks like you don\'t have an internet connection</string>
+
+    <string name="home_message">No action needed! System is successfully working. Thank you for your contribution</string>
+    <string name="uuid_text">Your uuid: %s</string>
+    <string name="current_situation">Current situation</string>
+    <string name="home_uuid_change_message">Change current UUID</string>
+    <string name="home_uuid_send_logs">Generate report</string>
+    <string name="home_uuid_change_confirmation">Are you sure you want to change current UUID?</string>
+    <string name="home_uuid_change_information">Your current uuid will be deleted from this device</string>
+
+    <string name="power_notification_chanel_name">System notifications</string>
+    <string name="notification_service_started_title">&appname; Started</string>
+    <string name="notification_service_started_message">&appname; has started checking whether the device is charging</string>
+    <string name="notification_service_running_title">&appname; Running</string>
+    <string name="notification_service_running_message">&appname; is checking whether the device is charging</string>
+    <string name="notification_service_stopped_title">&appname; Stopped</string>
+    <string name="notification_service_stopped_message">&appname; has stopped checking whether the device is charging. If it doesn\'t restart, please recheck your UUID and try again.</string>
+    <string name="notification_service_restart_title">&appname; Restarted</string>
+    <string name="notification_service_restart_message">&appname; has restarted checking whether the device is charging</string>
+</resources>
