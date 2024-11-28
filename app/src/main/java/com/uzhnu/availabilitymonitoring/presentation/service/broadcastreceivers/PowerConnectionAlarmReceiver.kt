@@ -38,7 +38,7 @@ class PowerConnectionAlarmReceiver : BroadcastReceiver() {
             val log = "isCharging: ${status.isCharging}"
             logger.log(TAG, log)
 
-            if (status.isCharging) {
+            if (status.isCharging || true) {
                 pingServer()
             }
         }

@@ -124,6 +124,33 @@ fun HomeContent(
                 stringResource(id = R.string.Vinogradiv) to 20.0, // 60% електроживлення
                 stringResource(id = R.string.Bereznuy) to 75.0, // 60% електроживлення
                 stringResource(id = R.string.Perechyn) to 30.0  // 30% електроживлення
+//                stringResource(id = R.string.Uzhgorod) to 95.0, // 95% електроживлення
+//                stringResource(id = R.string.Mukachevo) to 95.0, // 95% електроживлення
+//                stringResource(id = R.string.Mizhhirskiy) to 95.0, // 60% електроживлення
+//                stringResource(id = R.string.Svalyava) to 95.0, // 60% електроживлення
+//                stringResource(id = R.string.Tyachiv) to 80.0, // 60% електроживлення
+//                stringResource(id = R.string.Irshava) to 70.0, // 60% електроживлення
+//                stringResource(id = R.string.Beregovo) to 60.0, // 60% електроживлення
+//                stringResource(id = R.string.Khust) to 80.0, // 60% електроживлення
+//                stringResource(id = R.string.Volovets) to 35.0, // 60% електроживлення
+//                stringResource(id = R.string.Rahiv) to 40.0, // 60% електроживлення
+//                stringResource(id = R.string.Vinogradiv) to 90.0, // 60% електроживлення
+//                stringResource(id = R.string.Bereznuy) to 55.0, // 60% електроживлення
+//                stringResource(id = R.string.Perechyn) to 36.0  // 30% електроживлення
+//                        stringResource(id = R.string.Uzhgorod) to 95.0, // 95% електроживлення
+//
+//                stringResource(id = R.string.Mukachevo) to 95.0, // 95% електроживлення
+//                stringResource(id = R.string.Mizhhirskiy) to 10.0, // 60% електроживлення
+//                stringResource(id = R.string.Svalyava) to 40.0, // 60% електроживлення
+//                stringResource(id = R.string.Tyachiv) to 50.0, // 60% електроживлення
+//                stringResource(id = R.string.Irshava) to 60.0, // 60% електроживлення
+//                stringResource(id = R.string.Beregovo) to 70.0, // 60% електроживлення
+//                stringResource(id = R.string.Khust) to 80.0, // 60% електроживлення
+//                stringResource(id = R.string.Volovets) to 90.0, // 60% електроживлення
+//                stringResource(id = R.string.Rahiv) to 50.0, // 60% електроживлення
+//                stringResource(id = R.string.Vinogradiv) to 20.0, // 60% електроживлення
+//                stringResource(id = R.string.Bereznuy) to 75.0, // 60% електроживлення
+//                stringResource(id = R.string.Perechyn) to 30.0  // 30% електроживлення
             )
             uiState.uuid?.let { uuid ->
                 Text(
